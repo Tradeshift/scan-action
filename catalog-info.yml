@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: scan-action
+  description: |
+    GitHub Action for vulnerability Scanning
+  annotations:
+    github.com/project-slug: Tradeshift/scan-action
+  tags:
+    - github-action
+    - fork
+spec:
+  type: library
+  owner: developer-productivity
+  lifecycle: production
