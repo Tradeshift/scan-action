@@ -131,6 +131,7 @@ The inputs `image`, `path`, and `sbom` are mutually exclusive to specify the sou
 | `only-fixed`        | Specify whether to only report vulnerabilities that have a fix available.                                                                                                                                                                                        | `false`       |
 | `add-cpes-if-none`  | Specify whether to autogenerate missing CPEs.                                                                                                                                                                                                                    | `false`       |
 | `by-cve`            | Specify whether to orient results by CVE rather than GHSA.                                                                                                                                                                                                       | `false`       |
+| `vex`               | Specify a list of VEX documents to consider when producing scanning results.                                                                                                                                                                                     | `false`       |
 
 ### Action Outputs
 
@@ -150,7 +151,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - name: Build the container image
         run: docker build . --file Dockerfile --tag localbuild/testimage:latest
       - uses: anchore/scan-action@v3
@@ -170,7 +171,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - name: Build the Container image
         run: docker build . --file Dockerfile --tag localbuild/testimage:latest
       - uses: anchore/scan-action@v3
