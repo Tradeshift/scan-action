@@ -54,6 +54,6 @@
     "*.js": "prettier --write"
   },
   "engines": {
-    "node": ">=v20.11.0"
+    "node": ">=20.15.1"
   }
 }
