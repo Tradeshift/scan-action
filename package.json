@@ -54,6 +54,6 @@
     "*.js": "prettier --write"
   },
   "engines": {
-    "node": ">=20.16.0"
+    "node": ">=22.11.0"
   }
 }
